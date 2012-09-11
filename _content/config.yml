@@ -1,0 +1,19 @@
+site:
+    title: Website Title
+    description: hola!
+    author: Anonymous
+    pretty_urls: false
+    twitter_handle: hardfire
+    twitter_follow: true
+    
+smartypants:
+    enable: true
+
+baker:
+    skip_patterns:
+        - /^index.php/
+
+#sass config
+sass:
+    load_paths: [templates/sass]
+

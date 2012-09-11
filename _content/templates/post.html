@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+
+{% block content %}
+	<article role="article">	
+		<header>
+			<h1 class="entry-title">{{ page.title }}</h1>
+			<p class="post-meta">
+				<span class="post-date">{{ page.date }}&nbsp;{{ page.time }}</span>
+				{% if page.author %}<span class="post-author">by {{ page.author }}</span>{% endif %}
+			</p>
+		</header>
+		{{ content|raw }}
+	</article>
+{% endblock %}

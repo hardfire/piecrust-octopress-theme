@@ -1,0 +1,19 @@
+{% if site.twitter_handle %}
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("{{site.twitter_handle}}", 5, false);
+    });
+  </script>
+  <script src="{{ root_url }}/js/twitter.js" type="text/javascript"> </script>
+  {% if site.twitter_follow %}
+    <a href="http://twitter.com/{{ site.twitter_handle }}" class="twitter-follow-button" data-show-count="true">Follow @{{ site.twitter_handle }}</a>
+  {% else %}
+    <p>Follow <a href="http://twitter.com/{{site.twitter_handle}}">@{{ site.twitter_handle }}</a></p>
+  {% endif %}
+</section>
+{% endif %}
